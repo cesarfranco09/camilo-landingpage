@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+@theme {
+  --color-sand-50: #faf8f5;
+  --color-sand-100: #f3efe8;
+  --color-sand-200: #e8e0d4;
+  --color-sand-300: #d6cab7;
+  --color-sand-400: #c2b09a;
+  --color-sand-500: #a89478;
+  --color-sand-600: #8f7a5e;
+  --color-sand-700: #75624a;
+  --color-sand-800: #5c4d3b;
+  --color-sand-900: #4a3f31;
+
+  --color-sage-50: #f4f7f4;
+  --color-sage-100: #e4ebe4;
+  --color-sage-200: #c9d6c9;
+  --color-sage-300: #a3b8a3;
+  --color-sage-400: #7d997d;
+  --color-sage-500: #5e7e5e;
+  --color-sage-600: #4a664a;
+  --color-sage-700: #3d523d;
+  --color-sage-800: #334333;
+  --color-sage-900: #2b372b;
+
+  --color-warm-50: #fdf8f6;
+  --color-warm-100: #f9ede7;
+  --color-warm-200: #f2d8cc;
+  --color-warm-300: #e8bea8;
+  --color-warm-400: #db9e80;
+  --color-warm-500: #cc7f5e;
+  --color-warm-600: #b86843;
+  --color-warm-700: #9a5537;
+  --color-warm-800: #7e462f;
+  --color-warm-900: #683b28;
+
+  --color-cream: #fdfbf7;
+  --color-parchment: #f7f3ec;
+
+  --font-sans: "DM Sans", system-ui, sans-serif;
+  --font-serif: "DM Serif Display", Georgia, serif;
+}
+
+/* Smooth scrolling & prevent horizontal overflow on mobile */
+html,
+body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-sand-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-sand-400);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-sand-500);
+}
+
+/* Organic blob shapes for decorative use */
+@keyframes blob-float {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.05);
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-blob-float {
+  animation: blob-float 6s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out forwards;
+}
+
+.animation-delay-200 {
+  animation-delay: 0.2s;
+}
+.animation-delay-400 {
+  animation-delay: 0.4s;
+}
+.animation-delay-600 {
+  animation-delay: 0.6s;
+}
+.animation-delay-800 {
+  animation-delay: 0.8s;
+}
+
+/* Orbit / spin animation */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes spin-slow-reverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+.animate-spin-slow-reverse {
+  animation: spin-slow-reverse 25s linear infinite;
+}
+
+/* Gentle pulse */
+@keyframes pulse-soft {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.1); }
+}
+.animate-pulse-soft {
+  animation: pulse-soft 4s ease-in-out infinite;
+}
+
+/* Drift animation for floating circles */
+@keyframes drift {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(10px, -15px); }
+  50% { transform: translate(-5px, -25px); }
+  75% { transform: translate(-15px, -10px); }
+}
+@keyframes drift-alt {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(-12px, 10px); }
+  50% { transform: translate(8px, 20px); }
+  75% { transform: translate(15px, 5px); }
+}
+.animate-drift {
+  animation: drift 8s ease-in-out infinite;
+}
+.animate-drift-alt {
+  animation: drift-alt 10s ease-in-out infinite;
+}
