@@ -26,7 +26,7 @@ export function About() {
               {/* Main image container with organic shape */}
               <div className="relative rounded-[3rem] overflow-hidden shadow-2xl shadow-sand-200/40 aspect-4/5">
                 <img
-                  src="/assets/Camilo-aboutUs-pic.JPG"
+                  src="/assets/Camilo-aboutUs-pic-2.JPG"
                   alt="Dennis Munoz making a deal"
                   className="w-full h-full object-cover"
                 />
